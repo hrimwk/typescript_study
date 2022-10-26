@@ -31,6 +31,7 @@ interface Mobile {
 
 function getGift(gift: Car | Mobile) {
   //gift.start(); gift에는 start함수가 없어서 오류
+
   //검사할 내용이 많아지면 switch 사용
   if (gift.name === "car") {
     gift.start();
@@ -40,7 +41,7 @@ function getGift(gift: Car | Mobile) {
 }
 
 //Intersection Types
-//and를 의미
+//and를 의미 여러타입을 하나로 만들어줌
 interface Car2 {
   name: string;
   start(): void;
