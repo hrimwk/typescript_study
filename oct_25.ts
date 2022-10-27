@@ -41,11 +41,11 @@ add2(1, 2, 3); //6
 add2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10); //55
 
 //this
-interface User {
+interface User11 {
   name: string;
 }
 
-const Sam: User = { name: "Sam" };
+const Sam: User11 = { name: "Sam" };
 
 //매개변수는 두개
 function showName(this: User, age: number, gender: "m" | "f") {
@@ -56,14 +56,14 @@ const a = showName.bind(Sam);
 a(30, "m");
 
 //overloading
-interface User2 {
+interface User22 {
   name: string;
   age: number;
 }
 //동일한 매변수도 타입을 다르게 할당할 수 있기때문에 타입을 확신할 수 없다 생각
-function join(name: string, age: number): User;
+function join(name: string, age: number): User22;
 function join(name: string, age: string): string;
-function join(name: string, age: number | string): User | string {
+function join(name: string, age: number | string): User22 | string {
   if (typeof age === "number") {
     return {
       name,
@@ -73,5 +73,5 @@ function join(name: string, age: number | string): User | string {
     return "나이는 숫자로 입력해주세요.";
   }
 }
-const emma: User = join("Emma", 30);
-const jane: User = join("Jane", 20);
+const emma: User22 = join("Emma", 30);
+const jane: User22 = join("Jane", 20);

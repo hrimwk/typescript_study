@@ -44,7 +44,7 @@ class Bmw2 extends Car3 {
     console.log(super.name2);
   }
 }
-const bmw2 = new Car2("red", "zzz1");
+const bmw2 = new Car3("red", "zzz1");
 
 //static
 class Car4 {
@@ -82,6 +82,7 @@ abstract class Car5 {
     console.log("start");
   }
 }
+// 추상 클래스는 이렇게 사용 불가 const car = new Car5("red")
 
 class Bmw4 extends Car5 {
   constructor(color: string) {
