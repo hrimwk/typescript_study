@@ -77,3 +77,7 @@ type T1 = string | number | boolean;
 type T2 = Exclude<T1, number | boolean>;
 
 //NonNullable<Type>
+//null을 제외한 타입을 생성 undefined도 같이 제거
+
+
+
